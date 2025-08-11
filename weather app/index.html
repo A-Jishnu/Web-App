@@ -16,7 +16,7 @@
         <div class="error">
             <p>Invalid City Name</p>
         </div>
-        <div class="weather">
+        <div class="weather">   
             <img src="images/rain.png" class="weather-icon" alt="Weather Icon">
             <h1 class="temp">22°c</h1>
             <h2 class="city">New York</h2>
@@ -80,6 +80,12 @@
 
         searchBtn.addEventListener("click", () => {
             checkWeather(searchBox.value);
+        });
+
+        searchBox.addEventListener("keypress", (event) => {
+            if (event.key === "Enter") {
+                checkWeather(searchBox.value);
+            }
         });
     </script>
 </body>
